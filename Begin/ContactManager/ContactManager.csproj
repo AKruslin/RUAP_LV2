@@ -218,6 +218,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Contact\" />
+    <Folder Include="Views\llij\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

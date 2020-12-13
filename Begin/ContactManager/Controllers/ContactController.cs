@@ -21,5 +21,6 @@ namespace ContactManager.Controllers
         {
             return contactRepository.GetAllContacts();
         }
+
     }
 }
