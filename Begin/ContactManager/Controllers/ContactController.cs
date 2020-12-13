@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
 
@@ -21,6 +22,13 @@ namespace ContactManager.Controllers
         {
             return contactRepository.GetAllContacts();
         }
+        public HttpResponseMessage Post(Contact contact)
+        {
+            this.contactRepository.SaveContact(contact);
 
+            var response = Request.CreateResponse<Contact>(System.Net.HttpStatusCode.Created, contact);
+
+            return response;
+        }
     }
 }
